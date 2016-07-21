@@ -6,22 +6,23 @@ curl -L https://toolbelt.treasuredata.com/sh/install-ubuntu-trusty-td-agent2.sh 
 #!/bin/sh
 #tdagent
 curl -L https://toolbelt.treasuredata.com/sh/install-ubuntu-trusty-td-agent2.sh | sh
+sudo td-agent-gem install fluent-plugin-elasticsearch
 /etc/init.d/td-agent restart
 /etc/init.d/td-agent status
 
 echo "
 <source>
- type syslog
+ @type syslog
  port 5140
  tag  syslog
 </source>
 
 <source>
- type forward
+ @type forward
 </source>
 
 <match syslog.*.*>
- type elasticsearch
+ @type elasticsearch
  logstash_format true
  flush_interval 10s
 </match>
