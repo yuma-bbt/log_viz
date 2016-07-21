@@ -43,7 +43,7 @@ sudo /etc/init.d/elasticsearch status
 #kibana 
 wget https://download.elastic.co/kibana/kibana/kibana-4.5.1-linux-x64.tar.gz
 tar xfvz kibana-4.5.1-linux-x64.tar.gz
-./kibana-4.5.1-linux-x64/bin/kibana&
+./kibana-4.5.1-linux-x64/bin/kibana -p 80&
 sleep 10 
 curl -XGET http://localhost:9200
 
