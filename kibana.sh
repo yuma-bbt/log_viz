@@ -25,7 +25,7 @@ echo "
  logstash_format true
  flush_interval 10s
 </match>
-" > /etc/td-agent.conf
+" > /etc/td-agent/td-agent.conf
 
 
 #java
