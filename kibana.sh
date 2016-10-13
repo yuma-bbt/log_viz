@@ -1,4 +1,6 @@
 #!/bin/sh
+sudo su
+apt-get update ; sudo apt-get upgrade -y ; sudo apt-get install git -y;
 #tdagent
 curl -L https://toolbelt.treasuredata.com/sh/install-ubuntu-trusty-td-agent2.sh | sh
 /etc/init.d/td-agent restart
