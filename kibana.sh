@@ -30,6 +30,12 @@ echo "
 </match>
 " > /etc/td-agent/td-agent.conf
 
+echo "
+index.code: best_compression
+" >> /etc/elasticsearch/elasticsearch.yml
+
+
+
 
 #java
 sudo add-apt-repository -y ppa:webupd8team/java
